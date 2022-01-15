@@ -1,0 +1,22 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "final-project ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faridamoussaeff/final-project.git"
+  },
+  "author": "Farida Mussayeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faridamoussaeff/final-project/issues"
+  },
+  "homepage": "https://github.com/faridamoussaeff/final-project#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
