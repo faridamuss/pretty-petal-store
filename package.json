@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/faridamoussaeff/final-project#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^12.0.3",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mongoose": "^6.1.6"
   },
   "devDependencies": {
     "concurrently": "^7.0.0",
