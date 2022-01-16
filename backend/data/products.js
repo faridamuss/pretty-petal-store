@@ -1,6 +1,5 @@
 const products = [
   {
-    _id: "1",
     name: "Terrarirum 1",
     image: "/images/1.png",
     description: "",
@@ -12,7 +11,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "2",
     name: "Terrarium 2",
     image: "/images/2.png",
     description: "",
@@ -24,7 +22,6 @@ const products = [
     numReviews: 8,
   },
   {
-    _id: "3",
     name: "Terrarium 3",
     image: "/images/3.png",
     description: " ",
@@ -36,7 +33,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "4",
     name: "Terrarium 4",
     image: "/images/4.png",
     description: "",
@@ -48,7 +44,6 @@ const products = [
     numReviews: 12,
   },
   {
-    _id: "5",
     name: "Terrarium 5",
     image: "/images/5.png",
     description: "",
@@ -60,7 +55,6 @@ const products = [
     numReviews: 10,
   },
   {
-    _id: "6",
     name: "Terrarium 6",
     image: "/images/6.png",
     description: "",
