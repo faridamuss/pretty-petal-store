@@ -25,7 +25,7 @@ router.get(
   asyncHandler(async (req, res) => {
     
     const product = await Product.findById(req.params.id);
-    if( !mongoose.Types.ObjectId.isValid(id) ) return false;
+   
     if (product) {
       res.json(product);
     } else {
