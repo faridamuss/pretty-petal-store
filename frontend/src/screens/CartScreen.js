@@ -14,8 +14,10 @@ import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
 const CartScreen = ({ history }) => {
-  const productId = useParams().id;
+  const params = useParams();
+  const productId = params.id;
   const location = useLocation();
+  
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
   const dispatch = useDispatch();
@@ -23,11 +25,11 @@ const CartScreen = ({ history }) => {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  useEffect(() => {
-    if (productId) {
-      dispatch(addToCart(productId, qty));
-    }
-  }, [dispatch, productId, qty]);
+  // useEffect(() => {
+  //   if (productId) {
+  //     dispatch(addToCart(productId, qty));
+  //   }
+  // }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
     // console.log('remove');
@@ -38,17 +40,16 @@ const CartScreen = ({ history }) => {
     history.push("/login?redirect=shipping");
   };
 
-  return (
+   return (
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
-            {" "}
-            Your cart is empty <Link to="/">Go Back</Link>{" "}
+            Your cart is empty <Link to='/'>Go Back</Link>
           </Message>
         ) : (
-          <ListGroup variant="flush">
+          <ListGroup variant='flush'>
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
@@ -61,7 +62,7 @@ const CartScreen = ({ history }) => {
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
                     <Form.Control
-                      as="select"
+                      as='select'
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
@@ -78,11 +79,11 @@ const CartScreen = ({ history }) => {
                   </Col>
                   <Col md={2}>
                     <Button
-                      type="button"
-                      variant="light"
+                      type='button'
+                      variant='light'
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className="fas fa-trash"></i>
+                      <i className='fas fa-trash'></i>
                     </Button>
                   </Col>
                 </Row>
@@ -91,33 +92,33 @@ const CartScreen = ({ history }) => {
           </ListGroup>
         )}
       </Col>
-      <Col md={4}></Col>
-      <Card>
-        <ListGroup variant="flush">
-          <ListGroup.Item>
-            <h2>
-              Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-              items
-            </h2>
-            $
-            {cartItems
-              .reduce((acc, item) => acc + item.qty * item.price, 0)
-              .toFixed(2)}
-          </ListGroup.Item>
-          <ListGroup.Item>
-            <Button
-              type="button"
-              className="btn-block"
-              disabled={cartItems.length === 0}
-              onClick={checkoutHandler}
-            >
-              Proceed to Checkout
-            </Button>
-          </ListGroup.Item>
-        </ListGroup>
-      </Card>
+      <Col md={4}>
+        <Card>
+          <ListGroup variant='flush'>
+            <ListGroup.Item>
+              <h2>
+                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                items
+              </h2>
+              $
+              {cartItems
+                .reduce((acc, item) => acc + item.qty * item.price, 0)
+                .toFixed(2)}
+            </ListGroup.Item>
+            <ListGroup.Item>
+              <Button
+                type='button'
+                className='btn-block'
+                disabled={cartItems.length === 0}
+                onClick={checkoutHandler}
+              >
+                Proceed To Checkout
+              </Button>
+            </ListGroup.Item>
+          </ListGroup>
+        </Card>
+      </Col>
     </Row>
-  );
-};
-
+  )
+}
 export default CartScreen;
