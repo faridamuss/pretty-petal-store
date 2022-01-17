@@ -13,9 +13,7 @@ import {
 import Message from "../components/Message";
 import { addToCart } from "../actions/cartActions";
 
-const CartScreen = ({  history }) => {
-  
-
+const CartScreen = ({ history }) => {
   const productId = useParams().id;
   const location = useLocation();
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
@@ -32,12 +30,12 @@ const CartScreen = ({  history }) => {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    console.log();
+    console.log('remove');
   };
 
   const checkoutHandler = () => {
-    console.log(object)
-  }
+    history.push('/login?redirect=shipping')
+  };
 
   return (
     <Row>
@@ -112,8 +110,7 @@ const CartScreen = ({  history }) => {
               disabled={cartItems.length === 0}
               onClick={checkoutHandler}
             >
-              {" "}
-              Proceed to Checkout{" "}
+              Proceed to Checkout
             </Button>
           </ListGroup.Item>
         </ListGroup>
