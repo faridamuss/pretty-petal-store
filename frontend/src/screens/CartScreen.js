@@ -13,11 +13,11 @@ import {
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
-const CartScreen = ({ history }) => {
+const CartScreen = ({  }) => {
   const params = useParams();
   const productId = params.id;
   const location = useLocation();
-
+  const navigate = useNavigate()
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
   const dispatch = useDispatch();
@@ -34,10 +34,11 @@ const CartScreen = ({ history }) => {
   const removeFromCartHandler = (id) => {
     // console.log('remove');
     dispatch(removeFromCart(id));
+   
   };
 
   const checkoutHandler = () => {
-    history.push("/login?redirect=shipping");
+    navigate("/login?redirect=shipping");
   };
 
   return (
