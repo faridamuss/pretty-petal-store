@@ -17,7 +17,7 @@ const CartScreen = ({ history }) => {
   const params = useParams();
   const productId = params.id;
   const location = useLocation();
-  
+
   const qty = location.search ? Number(location.search.split("=")[1]) : 1;
 
   const dispatch = useDispatch();
@@ -40,16 +40,16 @@ const CartScreen = ({ history }) => {
     history.push("/login?redirect=shipping");
   };
 
-   return (
+  return (
     <Row>
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to='/'>Go Back</Link>
+            Your cart is empty <Link to="/">Go Back</Link>
           </Message>
         ) : (
-          <ListGroup variant='flush'>
+          <ListGroup variant="flush">
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
@@ -62,7 +62,7 @@ const CartScreen = ({ history }) => {
                   <Col md={2}>${item.price}</Col>
                   <Col md={2}>
                     <Form.Control
-                      as='select'
+                      as="select"
                       value={item.qty}
                       onChange={(e) =>
                         dispatch(
@@ -79,11 +79,11 @@ const CartScreen = ({ history }) => {
                   </Col>
                   <Col md={2}>
                     <Button
-                      type='button'
-                      variant='light'
+                      type="button"
+                      variant="light"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className='fas fa-trash'></i>
+                      <i className="fas fa-trash"></i>
                     </Button>
                   </Col>
                 </Row>
@@ -94,10 +94,11 @@ const CartScreen = ({ history }) => {
       </Col>
       <Col md={4}>
         <Card>
-          <ListGroup variant='flush'>
+          <ListGroup variant="flush">
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                Subtotal (
+                {cartItems.reduce((acc, item) => Number(acc + item.qty), 0)})
                 items
               </h2>
               $
@@ -107,8 +108,8 @@ const CartScreen = ({ history }) => {
             </ListGroup.Item>
             <ListGroup.Item>
               <Button
-                type='button'
-                className='btn-block'
+                type="button"
+                className="btn-block"
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
@@ -119,6 +120,6 @@ const CartScreen = ({ history }) => {
         </Card>
       </Col>
     </Row>
-  )
-}
+  );
+};
 export default CartScreen;
