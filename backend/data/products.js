@@ -13,7 +13,7 @@ const products = [
   {
     name: "Terrarium 2",
     image: "/images/2.png",
-    description: " ",
+    description: " fdsssssssssssssssssssfsfsffsdfsfsdfsdfsdf",
     brand: " ",
     category: " ",
     price: 599.99,
