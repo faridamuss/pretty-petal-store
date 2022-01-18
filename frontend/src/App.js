@@ -14,19 +14,17 @@ const App = () => {
       <Header />
       <main className="py-3">
         <Container>
-         
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/product/:id" element={<ProductScreen />} />
-            <Route path='/cart'>
-            <Route path=':id' element={<CartScreen />} />
-            <Route path='' element={<CartScreen />} /></Route>
-            <Route path = "/">
-              <Route path = 'login' element = {<LoginScreen/>} />
+            <Route path="/cart">
+              <Route path=":id" element={<CartScreen />} />
+              <Route path="" element={<CartScreen />} />
             </Route>
-          <Route path = "/login" element = {<LoginScreen/>} />
-            
-            
+            <Route path="/">
+              <Route path="login" element={<LoginScreen />} />
+            </Route>
+            <Route path="/login" element={<LoginScreen />} />
           </Routes>
         </Container>
       </main>
