@@ -1,5 +1,9 @@
+
+
+
+
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
@@ -10,9 +14,12 @@ import { login } from "../actions/userActions";
 const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const redirect = location.search ? location.search.split("=")[1] : "/";
-
+  const [searchParams] = useSearchParams();
+  //const { search } = useLocation(); 
+  //const { location} = useLocation();
+  const redirect = [...searchParams].length > 0 ? [...searchParams][0][1] : "/";
+  //const redirect = new URLSearchParams(search).get('querystringkey');
+  //const redirect = location.search ? location.search.split('=')[1] : '/'
   const submitHandler = (e) => {
     e.preventDefault();
     //DISPATCH LOGIN
