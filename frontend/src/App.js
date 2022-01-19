@@ -9,9 +9,11 @@ import CartScreen from "./screens/CartScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProfileScreen from "./screens/ProfileScreen";
-import ShippingScreen from "./screens/ShippingScreen"
+import ShippingScreen from "./screens/ShippingScreen";
 import PaymentScreen from "./screens/PaymentScreen";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
+import UserListScreen from "./screens/UserListScreen";
+
 const App = () => {
   return (
     <Router>
@@ -21,7 +23,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomeScreen />} />
             <Route path="/product/:id" element={<ProductScreen />} />
-          
             <Route path="/cart">
               <Route path=":id" element={<CartScreen />} />
               <Route path="" element={<CartScreen />} />
@@ -34,9 +35,14 @@ const App = () => {
             <Route path="/profile" element={<ProfileScreen />} />
             <Route path="/login">
               <Route path="shipping" element={<ShippingScreen />} />
-           </Route>
-           <Route path="/payment" element={<PaymentScreen />} />
-           <Route path="/placeorder" element={<PlaceOrderScreen/>} />
+            </Route>
+            <Route path="/payment" element={<PaymentScreen />} />
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+            
+            <Route path="/admin">
+              <Route path="userlist" element={<UserListScreen />} />
+              {/* <Route path="products" element={<UserListScreen />} /> */}
+            </Route>
           </Routes>
         </Container>
       </main>
