@@ -6,7 +6,7 @@ import connectDB from "./config/db.js";
 
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
-import OrderRoutes from './routes/OrderRoutes.js'
+import orderRoutes from './routes/OrderRoutes.js'
 
 dotenv.config();
 connectDB()
