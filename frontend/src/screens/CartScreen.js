@@ -99,7 +99,7 @@ const CartScreen = ({  }) => {
             <ListGroup.Item>
               <h2>
                 Subtotal (
-                {cartItems.reduce((acc, item) => Number(acc + item.qty), 0)})
+                {cartItems.reduce((acc, item) => (parseInt(acc) + parseInt( item.qty)), 0)})
                 items
               </h2>
               $
