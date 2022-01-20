@@ -78,13 +78,14 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="isadmin">
-              <Form.Check
-                type="checkbox"
-                label="Is Admin"
-                checked={isAdmin}
-                onChange={(e) => setIsAdmin(e.target.checked)}
-              ></Form.Check>
+            <Form.Group controlId="image">
+              <Form.Label>Image</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter image url"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+              ></Form.Control>
             </Form.Group>
 
             <Button type="submit" variant="primary">
