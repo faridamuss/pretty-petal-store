@@ -55,7 +55,16 @@ const ProductEditScreen = ({ navigation }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // UPDATE PRODUCT
+    dispatch(updateProduct({
+      _id: productId,
+      name,
+      price,
+      image, 
+      brand,
+      category, 
+      description, 
+      countInStock,
+    }))
   };
 
   return (
