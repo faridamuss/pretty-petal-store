@@ -43,18 +43,15 @@ const App = () => {
             <Route path="/payment" element={<PaymentScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
 
+            {/* ADMIN ROUTES */}
             <Route path="/admin">
               <Route path="userlist" element={<UserListScreen />} />
               <Route path="user/*" element={<UserEditScreen />} />
               <Route path="user/:id/*" element={<UserEditScreen />} />
               <Route path="productlist" element={<ProductListScreen />} />
-              <Route path="product" element={<ProductEditScreen />} />
+              {/* <Route path="product" element={<ProductEditScreen />} /> */}
               <Route path="product/:id/*" element={<ProductEditScreen />} />
             </Route>
-              {/* <Route path="product/*" element={<ProductEditScreen />} /> */}
-              {/* <Route path="products" element={<UserListScreen />} /> */}
-
-              {/* <Route path="admin/user/:id/edit" element={<UserEditScreen />} /> */}
 
             <Route path="/payment" element={<PaymentScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
