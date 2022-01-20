@@ -108,6 +108,16 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
+            <Form.Group controlId="category">
+              <Form.Label>Category</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter category"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
             <Button type="submit" variant="primary">
               Update
             </Button>
