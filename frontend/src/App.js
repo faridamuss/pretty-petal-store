@@ -15,6 +15,7 @@ import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import UserListScreen from "./screens/UserListScreen";
 import UserEditScreen from "./screens/UserEditScreen";
 import ProductListScreen from "./screens/ProductListScreen";
+import ProductEditScreen from "./screens/ProductEditScreen";
 
 import OrderScreen from "./screens/OrderScreen";
 const App = () => {
@@ -44,25 +45,24 @@ const App = () => {
 
             <Route path="/admin">
               <Route path="userlist" element={<UserListScreen />} />
+              <Route path="user/*" element={<UserEditScreen />} />
+              <Route path="user/:id/*" element={<UserEditScreen />} />
               <Route path="productlist" element={<ProductListScreen />} />
+              <Route path="product" element={<ProductEditScreen />} />
+              <Route path="product/:id/*" element={<ProductEditScreen />} />
+            </Route>
+              {/* <Route path="product/*" element={<ProductEditScreen />} /> */}
               {/* <Route path="products" element={<UserListScreen />} /> */}
 
               {/* <Route path="admin/user/:id/edit" element={<UserEditScreen />} /> */}
-              <Route path="user/*" element={<UserEditScreen />} />
-              <Route path="user/:id/*" element={<UserEditScreen />} />
-            </Route>
-         
-           <Route path="/payment" element={<PaymentScreen />} />
-           <Route path="/placeorder" element={<PlaceOrderScreen/>} />
-           
-           <Route path="/order">
+
+            <Route path="/payment" element={<PaymentScreen />} />
+            <Route path="/placeorder" element={<PlaceOrderScreen />} />
+
+            <Route path="/order">
               <Route path=":id" element={<OrderScreen />} />
-           </Route>
-           
-              
-            
+            </Route>
           </Routes>
-        
         </Container>
       </main>
       <Footer />
