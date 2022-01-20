@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import FormContainer from "../components/FormContainer";
-import { listProductDetails } from "../actions/productActions";
+import { listProductDetails, updateProduct } from "../actions/productActions";
 
 const ProductEditScreen = ({ navigation }) => {
   const params = useParams();
@@ -25,6 +25,9 @@ const ProductEditScreen = ({ navigation }) => {
 
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
+
+  const productUpdate = useSelector((state) => state.productUpdate);
+  const { loading, error, product } = productUpdate;
 
   useEffect(() => {
     if (!product.name || product._id !== productId) {
