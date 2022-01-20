@@ -30,7 +30,7 @@ const ProductListScreen = ({}) => {
     } else {
       navigate("/login");
     }
-  }, [dispatch, userInfo, navigate]);
+  }, [dispatch, userInfo, navigate, successDelete]);
 
   const deleteHandler = (id) => {
     if (window.confirm("Are you sure?")) {
