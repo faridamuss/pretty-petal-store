@@ -39,7 +39,7 @@ export const productDetailsReducer = (
   }
 };
 
-export const productDeletesReducer = (state = {}, action) => {
+export const productDeleteReducer = (state = {}, action) => {
   switch (action.type) {
     case PRODUCT_DELETE_REQUEST:
       return { loading: true };
