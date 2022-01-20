@@ -24,6 +24,7 @@ const getProductById = asyncHandler(async (req, res) => {
   }
 });
 
+
 // @desc    Delete a product
 // @route   DELETE /api/products/:id
 // @access  Private/Admin
