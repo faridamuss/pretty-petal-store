@@ -88,6 +88,16 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
+            <Form.Group controlId="brand">
+              <Form.Label>Brand</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter brand"
+                value={brand}
+                onChange={(e) => setBrand(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
             <Button type="submit" variant="primary">
               Update
             </Button>
