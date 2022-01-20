@@ -84,4 +84,4 @@ const updateProduct = asyncHandler(async (req, res) => {
   }
 });
 
-export { getProducts, getProductById, deleteProduct };
+export { getProducts, getProductById, deleteProduct, createProduct, updateProduct };
