@@ -50,19 +50,26 @@ const App = () => {
               <Route path="user/*" element={<UserEditScreen />} />
               <Route path="user/:id/*" element={<UserEditScreen />} />
               <Route path="productlist" element={<ProductListScreen />} />
+              <Route path="productlist/:pageNumber" element={<ProductListScreen />} />
               <Route path="product" element={<ProductEditScreen />} />
               <Route path="product/:id/*" element={<ProductEditScreen />} />
     
               <Route path="orderlist" element={<OrderListScreen />} />
             </Route>
-
+            <Route path="/search">
+              <Route path=":keyword" element={<HomeScreen />} />
+              <Route path=":keyword/page/:pageNumber" element={<HomeScreen />} />
+              
+            </Route>
             <Route path="/payment" element={<PaymentScreen />} />
             <Route path="/placeorder" element={<PlaceOrderScreen />} />
-
+            
             <Route path="/order">
               <Route path=":id" element={<OrderScreen />} />
+            </Route>
 
-              
+            <Route path="/page">
+              <Route path=":pageNumber" element={<HomeScreen />} />
             </Route>
           </Routes>
         </Container>
