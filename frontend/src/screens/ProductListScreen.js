@@ -12,7 +12,7 @@ import {
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 
-const ProductListScreen = ({}) => {
+const ProductListScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
