@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/faridamoussaeff/final-project#readme",
   "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@mui/icons-material": "^5.3.0",
+    "@mui/material": "^5.3.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^12.0.3",

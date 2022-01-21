@@ -95,7 +95,6 @@ const ProductListScreen = ({}) => {
               <th>ID</th>
               <th>NAME</th>
               <th>PRICE</th>
-              <th>ADMIN</th>
               <th>CATEGORY</th>
               <th>BRAND</th>
               <th></th>
