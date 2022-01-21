@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from "react";
 import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import Meta from '../components/Meta'
 import {
   Row,
   Col,
@@ -77,6 +78,7 @@ return (
       <Message variant='danger'>{error}</Message>
     ) : (
       <>
+       <Meta title={product.name} />
         <Row>
           <Col md={6}>
             <Image src={product.image} alt={product.name} fluid />
