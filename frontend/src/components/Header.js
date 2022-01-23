@@ -22,6 +22,7 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>THE PRETTY PETTAL</Navbar.Brand>
+            {/* BsFlower1 */}
             {/* <img src='/images/logout.png'></img> */}
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

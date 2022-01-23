@@ -1,5 +1,5 @@
 main {
-  min-height: 80vh;
+  min-height: 85vh;
   background-color: #efdad7;
   /* background-image: url(../public/images/6.png); */
 }
@@ -40,8 +40,8 @@ h2 {
 }
 
 .carousel img {
-  height: 250px;
-  padding: 5px;
+  height: 200px;
+  padding: 10px;
   margin: 35px;
   border-radius: 8%;
   margin-left: auto;
