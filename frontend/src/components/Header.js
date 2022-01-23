@@ -21,7 +21,7 @@ const Header = () => {
       <Navbar class="navbar navbar-expand-lg navbar-dark bg-dark" bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>THE PRETTY PETTAL</Navbar.Brand>
+            <Navbar.Brand>THE PRETTY PETAL</Navbar.Brand>
             {/* BsFlower1 */}
             {/* <img src='/images/logout.png'></img> */}
           </LinkContainer>
