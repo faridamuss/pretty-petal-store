@@ -13,7 +13,7 @@ import {
 import Message from "../components/Message";
 import { addToCart, removeFromCart } from "../actions/cartActions";
 
-const CartScreen = ({  }) => {
+const CartScreen = () => {
   const params = useParams();
   const productId = params.id;
   const location = useLocation();
