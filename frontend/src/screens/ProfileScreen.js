@@ -85,7 +85,7 @@ const ProfileScreen = () => {
 
   return ( <Row>
     <Col md={3}>
-      <h2>User Profile</h2>
+    <h2 style={{color:"#872f5e"}}><strong>USER PROFILE</strong></h2>
       <Toast show={showMessage} delay={3000} autohide>
           <Toast.Body>Profile updated</Toast.Body>
  </Toast>
@@ -99,7 +99,7 @@ const ProfileScreen = () => {
       ) : (
         <Form onSubmit={submitHandler}>
           <Form.Group controlId='name'>
-            <Form.Label>Name</Form.Label>
+            <Form.Label><strong>Name</strong></Form.Label>
             <Form.Control
               type='name'
               placeholder='Enter name'
@@ -109,7 +109,7 @@ const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group controlId='email'>
-            <Form.Label>Email Address</Form.Label>
+            <Form.Label><strong>Email Address</strong></Form.Label>
             <Form.Control
               type='email'
               placeholder='Enter email'
@@ -119,7 +119,7 @@ const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group controlId='password'>
-            <Form.Label>Password</Form.Label>
+            <Form.Label><strong>Password</strong></Form.Label>
             <Form.Control
               type='password'
               placeholder='Enter password'
@@ -129,7 +129,7 @@ const ProfileScreen = () => {
           </Form.Group>
 
           <Form.Group controlId='confirmPassword'>
-            <Form.Label>Confirm Password</Form.Label>
+            <Form.Label><strong>Confirm Password</strong></Form.Label>
             <Form.Control
               type='password'
               placeholder='Confirm password'
@@ -138,14 +138,14 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Button type='submit' variant='primary'>
+          <Button type='submit' variant='primary'className="my-sm-2">
             Update
           </Button>
         </Form>
       )}
     </Col>
     <Col md={9}>
-    <h2>My Orders</h2>
+      
         {loadingOrders ? (
           <Loader />
         ) : errorOrders ? (

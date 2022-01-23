@@ -56,7 +56,7 @@ const UserEditScreen = ({ navigation }) => {
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit User</h1>
+      <h1 style={{color:"#872f5e"}}><strong>EDIT USER</strong></h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
         {loading ? (
@@ -89,12 +89,12 @@ const UserEditScreen = ({ navigation }) => {
               <Form.Check
                 type="checkbox"
                 label="Is Admin"
-                checked={isAdmin}
+                checked={isAdmin} className="my-sm-2"
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>
 
-            <Button type="submit" variant="primary">
+            <Button type="submit" variant="primary" className="my-sm-2">
               Update
             </Button>
           </Form>

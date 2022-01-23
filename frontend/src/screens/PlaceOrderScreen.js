@@ -63,9 +63,9 @@ const PlaceOrderScreen = () => {
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2><strong>Shipping</strong></h2>
               <p>
-                <strong>Address: </strong>
+                <strong>Address:</strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
                 {cart.shippingAddress.postalCode},{cart.shippingAddress.country}
               </p>

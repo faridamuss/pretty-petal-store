@@ -36,7 +36,7 @@ const UserListScreen = () => {
 
   return (
     <>
-      <h1>Users</h1>
+      <h1 style={{color:"#872f5e"}}><strong>USERS</strong></h1>
       {loading ? (
         <Loader />
       ) : error ? (

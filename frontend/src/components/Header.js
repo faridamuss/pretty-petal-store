@@ -1,13 +1,15 @@
 import React from "react";
-import { Route, useNavigate } from 'react-router-dom'
+import { Route, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
+import logo from '../assets/logo.svg'
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { logout } from "../actions/userActions";
-import SearchBox from './SearchBox.js'
+import SearchBox from "./SearchBox.js";
+
 const Header = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
@@ -16,16 +18,17 @@ const Header = () => {
   };
 
   return (
-    <header>
-      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+    <header> 
+      <Navbar class="navbar fixed-top" bg="dark" variant="dark" expand="lg" collapseOnSelect>
         <Container>
           <LinkContainer to="/">
-            <Navbar.Brand>Pretty Petals</Navbar.Brand>
+            <Navbar.Brand>The Pretty Petal</Navbar.Brand>
+            {/* <img src='/images/logout.png'></img> */}
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-           <SearchBox/> 
             <Nav className="ms-auto">
+            <SearchBox/>
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <i className="fas fa-shopping-cart"></i> Cart
@@ -62,6 +65,7 @@ const Header = () => {
               )}
             </Nav>
           </Navbar.Collapse>
+         
         </Container>
       </Navbar>
     </header>

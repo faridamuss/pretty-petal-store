@@ -26,7 +26,7 @@ const ShippingScreen = ({ }) => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 />
-      <h1>Shipping</h1>
+      <h1 style={{color:"#872f5e"}}><strong>SHIPPING ADDRESS</strong></h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
           <Form.Label>Address</Form.Label>
@@ -72,7 +72,7 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary'>
+        <Button type='submit' variant='primary' className="my-sm-2">
           Continue
         </Button>
       </Form>
