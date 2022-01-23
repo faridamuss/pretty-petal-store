@@ -1,6 +1,6 @@
 main {
   min-height: 80vh;
-  background-color: #EFDAD7;
+  background-color: #efdad7;
   /* background-image: url(../public/images/6.png); */
 }
 
@@ -31,28 +31,28 @@ h2 {
 .carousel-caption {
   position: absolute;
   top: 0;
-  padding: 10px;
+  padding: 2px;
   box-sizing: border-box;
 }
- 
+
 .carousel-caption h2 {
   color: #fff;
 }
- 
+
 .carousel img {
-  height: 300px;
-  padding: 40px;
-  margin: 40px;
-  border-radius: 10%;
+  height: 250px;
+  padding: 5px;
+  margin: 35px;
+  border-radius: 8%;
   margin-left: auto;
   margin-right: auto;
 }
 .carousel a {
   margin: 0 auto;
 }
- 
+
 @media (max-width: 900px) {
   .carousel-caption h2 {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 }
