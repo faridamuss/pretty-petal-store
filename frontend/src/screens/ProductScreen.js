@@ -84,7 +84,7 @@ return (
             <Image src={product.image} alt={product.name} fluid />
           </Col>
           <Col md={3}>
-            <ListGroup variant='flush'>
+            <ListGroup variant='flush' className="shadow">
               <ListGroup.Item>
                 <h3>{product.name}</h3>
               </ListGroup.Item>
@@ -100,9 +100,9 @@ return (
               </ListGroup.Item>
             </ListGroup>
           </Col>
-          <Col md={3}>
+          <Col md={3} >
             <Card>
-              <ListGroup variant='flush'>
+              <ListGroup variant='flush' className="shadow">
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
