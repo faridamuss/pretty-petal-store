@@ -67,7 +67,7 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Link className="shadow btn btn-light my-3" to="/">
+      <Link className="shadow btn btn-secondary my-3" to="/">
         Go Back
       </Link>
       {loading ? (
@@ -148,7 +148,7 @@ const ProductScreen = () => {
                   <ListGroup.Item>
                     <Button
                       onClick={addToCartHandler}
-                      className="btn-block"
+                      className="btn btn-dark"
                       type="button"
                       disabled={product.countInStock === 0}
                     >
