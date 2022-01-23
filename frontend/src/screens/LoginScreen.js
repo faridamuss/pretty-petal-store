@@ -33,12 +33,12 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-      <h1>Sign In</h1>
+      <h1 style={{color:"#872f5e", }}><strong>SIGN IN</strong></h1>
       {error && <Message variant = 'danger'> {error} </Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="email">
-          <Form.Label>Email Address</Form.Label>
+        <Form.Group controlId="email" className="my-sm-2">
+          <Form.Label><strong>Email Address</strong></Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
@@ -47,8 +47,8 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="password">
-          <Form.Label>Password</Form.Label>
+        <Form.Group controlId="password" className="my-sm-2">
+          <Form.Label><strong>Password</strong></Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter password"

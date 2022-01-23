@@ -98,7 +98,7 @@ const ProfileScreen = () => {
         <Message variant='danger'>{error}</Message>
       ) : (
         <Form onSubmit={submitHandler}>
-          <Form.Group controlId='name'>
+          <Form.Group controlId='name' className="my-sm-3">
             <Form.Label><strong>Name</strong></Form.Label>
             <Form.Control
               type='name'
@@ -108,7 +108,7 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId='email'>
+          <Form.Group controlId='email' className="my-sm-2"> 
             <Form.Label><strong>Email Address</strong></Form.Label>
             <Form.Control
               type='email'
@@ -118,7 +118,7 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId='password'>
+          <Form.Group controlId='password' className="my-sm-2">
             <Form.Label><strong>Password</strong></Form.Label>
             <Form.Control
               type='password'
@@ -128,7 +128,7 @@ const ProfileScreen = () => {
             ></Form.Control>
           </Form.Group>
 
-          <Form.Group controlId='confirmPassword'>
+          <Form.Group controlId='confirmPassword' className="my-sm-2">
             <Form.Label><strong>Confirm Password</strong></Form.Label>
             <Form.Control
               type='password'

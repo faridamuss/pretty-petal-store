@@ -69,7 +69,7 @@ const submitHandler = (e) => {
  
 return (
   <>
-    <Link className='btn btn-light my-3' to='/'>
+    <Link className='shadow btn btn-light my-3' to='/'>
       Go Back
     </Link>
     {loading ? (
