@@ -54,6 +54,7 @@ const App = () => {
               <Route path="productlist/:pageNumber" element={<ProductListScreen />} />
               <Route path="product" element={<ProductEditScreen />} />
               <Route path="product/:id/*" element={<ProductEditScreen />} />
+              
     
               <Route path="orderlist" element={<OrderListScreen />} />
             </Route>

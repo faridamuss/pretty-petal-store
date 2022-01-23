@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "./logo.png"
 import { Route, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
@@ -17,9 +18,13 @@ const Header = () => {
   };
 
   return (
+    
     <header> 
+      
       <Navbar class="navbar navbar-expand-lg navbar-dark bg-dark" bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        
         <Container>
+        <img className="hey" src={logo} alt='Logo'/>
           <LinkContainer to="/">
             <Navbar.Brand>THE PRETTY PETAL</Navbar.Brand>
             {/* BsFlower1 */}
@@ -69,6 +74,7 @@ const Header = () => {
       </Navbar>
     </header>
   );
+  
 };
 
 export default Header;
