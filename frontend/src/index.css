@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 main {
   min-height: 80vh;
+  /* background-image: url(../public/images/6.png); */
+ 
 }
 
 h3 {
@@ -36,18 +42,22 @@ h2 {
 }
 
 .carousel img {
+  width: 300px;
   height: 300px;
+  object-fit: cover;
+  /* height: 300px;
   padding: 30px;
-  margin: 40px;
+  margin: 50px;
+  width: 100%;
   /* border-radius: 50%; */
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */ 
 }
 .carousel a {
   margin: 0 auto;
 }
 @media (max-width: 900px) {
-  .carousel-caption h2 {
-    font-size: 2.5vw;
+  .carousel-caption h1 {
+    font-size: 3vw;
   }
 }

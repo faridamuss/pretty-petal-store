@@ -13,21 +13,26 @@ const SearchBox = () => {
       navigate("/");
     }
   };
-  
+
   return (
-    <Form onSubmit={submitHandler} form-inline my-2 my-lg-0>
+    <Form onSubmit={submitHandler} className="d-flex">
       <Form.Control
-        type='text'
-        name='q'
+        className="form-control me-sm-2"
+        type="text"
+        name="q"
         onChange={(e) => setKeyword(e.target.value)}
-        placeholder='Search Products...'
-        className='form-control mr-lg-3'
+        placeholder="Search Products..."
       ></Form.Control>
-      <Button  type='submit' variant='btn btn-secondary' className='d-flex'>
+
+      <Button
+        type="submit"
+        variant="btn btn-secondary"
+        className="btn btn-secondary my-2 my-sm-0"
+      >
         Search
       </Button>
     </Form>
-  )
-}
+  );
+};
 
 export default SearchBox;
