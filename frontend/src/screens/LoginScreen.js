@@ -37,7 +37,7 @@ const LoginScreen = () => {
       {error && <Message variant = 'danger'> {error} </Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="email" className="my-sm-2">
+        <Form.Group controlId="email" className="form-label mt-2">
           <Form.Label><strong>Email Address</strong></Form.Label>
           <Form.Control
             type="email"
@@ -47,7 +47,7 @@ const LoginScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="password" className="my-sm-2">
+        <Form.Group controlId="password" className="form-label mt-2">
           <Form.Label><strong>Password</strong></Form.Label>
           <Form.Control
             type="password"
@@ -56,7 +56,7 @@ const LoginScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-        <Button type="submit" variant="primary" className="my-sm-2">
+        <Button type="submit" variant="primary" className="form-label mt-2">
           Sign In
         </Button>
       </Form>
