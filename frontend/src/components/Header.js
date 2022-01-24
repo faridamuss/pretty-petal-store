@@ -24,7 +24,7 @@ const Header = () => {
         <Container>
         <img className="hey" src={logo} alt='Logo'/>
           <LinkContainer to="/">
-            <Navbar.Brand>THE PRETTY PETAL</Navbar.Brand>
+            <Navbar.Brand><h2 style={{paddingBottom: "0px", paddingTop:"30px"}}>The Pretty Petal</h2></Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

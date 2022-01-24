@@ -26,7 +26,7 @@ const SearchBox = () => {
 
       <Button
         type="submit"
-        variant="btn btn-primary"
+        variant="btn btn-outline-primary"
         className="btn btn-secondary my-1 my-sm-0"
       >
         Search

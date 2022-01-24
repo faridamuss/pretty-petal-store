@@ -54,7 +54,7 @@ const RegisterScreen = () => {
       {error && <Message variant="danger"> {error} </Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
-        <Form.Group controlId="name" className="my-sm-2"> 
+        <Form.Group controlId="name" className="form-label mt-2"> 
           <Form.Label><strong>Name</strong></Form.Label>
           <Form.Control
             type="name"
@@ -64,7 +64,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="email" className="my-sm-2">
+        <Form.Group controlId="email" className="form-label mt-2">
           <Form.Label><strong>Email Address</strong></Form.Label>
           <Form.Control
             type="email"
@@ -74,7 +74,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="password" className="my-sm-2">
+        <Form.Group controlId="password" className="form-label mt-2">
           <Form.Label><strong>Password</strong></Form.Label>
           <Form.Control
             type="password"
@@ -84,7 +84,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId="confirmPassword" className="my-sm-2">
+        <Form.Group controlId="confirmPassword" className="form-label mt-2">
           <Form.Label><strong>Confirm Password</strong></Form.Label>
           <Form.Control
             type="password"
@@ -94,7 +94,7 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type="submit" variant="primary" className="my-sm-3">
+        <Button type="submit" variant="primary" className="form-label mt-3">
           Register
         </Button>
       </Form>
