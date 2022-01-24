@@ -20,9 +20,7 @@ const Header = () => {
   return (
     
     <header> 
-      
-      <Navbar class="navbar navbar-expand-lg navbar-dark bg-dark" bg="dark" variant="dark" expand="lg" collapseOnSelect>
-        
+      <Navbar class="navbar navbar-expand-lg navbar-light bg-light" bg="light" variant="light" expand="lg" collapseOnSelect>
         <Container>
         <img className="hey" src={logo} alt='Logo'/>
           <LinkContainer to="/">
