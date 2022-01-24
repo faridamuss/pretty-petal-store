@@ -14,9 +14,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faridamoussaeff/final-project.git"
-  },
-  "author": "Farida Mussayeva, Ekin Koluk",
+    "url": "git+https://github.com/faridamoussaeff/final-project.git"  },
+  "author": "Farida Mussayeva, Ekin Koluk, Zeinab Abdultawab",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/faridamoussaeff/final-project/issues"
