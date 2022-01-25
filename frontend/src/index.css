@@ -1,6 +1,6 @@
 main {
   min-height: 85vh;
-  background-color: #F9F9F9;
+  background-color: #F3F1F5;
   /* background-image: url(../public/images/6.png); */
 }
 
@@ -40,7 +40,7 @@ h2 {
 }
 
 .carousel img {
-  height: 200px;
+  height: 300px;
   padding: 5px;
   margin: 35px;
   margin-left: auto;

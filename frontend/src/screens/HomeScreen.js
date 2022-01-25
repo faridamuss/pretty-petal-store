@@ -32,7 +32,7 @@ const HomeScreen = () => {
           Go Back
         </Link>
       )}
-      <h1 style={{ color: "#980F5A", padding: "10px" }}><strong>LATEST PRODUCTS</strong>
+      <h1 style={{padding: "10px" }}><strong>LATEST PRODUCTS</strong>
       </h1>
       {loading ? (
         <Loader />
