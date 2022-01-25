@@ -78,7 +78,7 @@ const UserListScreen = () => {
                     className="btn-sm"
                     onClick={() => deleteHandler(user._id)}
                   >
-                    <i className="fas fa-trash"></i>
+                    <i className="fas fa-trash"></i> 
                   </Button>
                 </td>
               </tr>

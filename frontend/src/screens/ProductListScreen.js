@@ -77,9 +77,9 @@ const ProductListScreen = () => {
         <Col>
           <h1 style={{color:"#872f5e"}}><strong>PRODUCTS</strong></h1>
         </Col>
-        <Col className="text-right">
-          <Button className="shadow my-2" style={{paddingRight: "26px" }} onClick={createProductHandler}>
-            <i className="fas fa-plus"></i> Create Product
+        <Col className='text-right'>
+          <Button className="d-block mr-0 ml-auto" onClick={createProductHandler}>
+            <i className='fas fa-plus'></i> Create Product
           </Button>
         </Col>
       </Row>
