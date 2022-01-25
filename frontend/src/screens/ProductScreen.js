@@ -179,7 +179,7 @@ const ProductScreen = () => {
                   )}
                   {userInfo ? (
                     <Form onSubmit={submitHandler}>
-                      <Form.Group controlId="rating">
+                      <Form.Group controlId="rating mt-4" >
                         <Form.Label>Rating</Form.Label>
                         <Form.Control
                           as="select"
@@ -194,7 +194,7 @@ const ProductScreen = () => {
                           <option value="5">5 - Excellent</option>
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group controlId="comment">
+                      <Form.Group controlId="comment mt-3">
                         <Form.Label>Comment</Form.Label>
                         <Form.Control
                           as="textarea"
@@ -203,7 +203,7 @@ const ProductScreen = () => {
                           onChange={(e) => setComment(e.target.value)}
                         ></Form.Control>
                       </Form.Group>
-                      <Button type="submit" variant="primary">
+                      <Button type="submit" variant="primary mt-2">
                         Submit
                       </Button>
                     </Form>
