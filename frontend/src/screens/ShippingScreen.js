@@ -39,7 +39,7 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='city'>
+        <Form.Group controlId='city' className="form-label mt-2">
           <Form.Label>City</Form.Label>
           <Form.Control
             type='text'
@@ -50,7 +50,7 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='postalCode'>
+        <Form.Group controlId='postalCode' className="form-label mt-2">
           <Form.Label>Postal Code</Form.Label>
           <Form.Control
             type='text'
@@ -61,7 +61,7 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Form.Group controlId='country'>
+        <Form.Group controlId='country' className="form-label mt-2">
           <Form.Label>Country</Form.Label>
           <Form.Control
             type='text'
@@ -72,7 +72,7 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type='submit' variant='primary' className="my-sm-2">
+        <Button type='submit' variant='primary' className="form-label mt-2">
           Continue
         </Button>
       </Form>

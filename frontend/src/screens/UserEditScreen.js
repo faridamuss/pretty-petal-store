@@ -89,12 +89,12 @@ const UserEditScreen = ({ navigation }) => {
               <Form.Check
                 type="checkbox"
                 label="Is Admin"
-                checked={isAdmin} className="my-sm-2"
+                checked={isAdmin} className="form-label mt-2"
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>
 
-            <Button type="submit" variant="primary" className="my-sm-2">
+            <Button type="submit" variant="primary" className="form-label mt-2">
               Update
             </Button>
           </Form>

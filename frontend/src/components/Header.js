@@ -20,7 +20,7 @@ const Header = () => {
   return (
     
     <header> 
-      <Navbar class="navbar navbar-expand-lg navbar-light bg-light" bg="light" variant="light" expand="lg" collapseOnSelect>
+      <Navbar className="long shadow" class="navbar navbar-expand-lg navbar-light bg-light" bg="light" variant="light" expand="lg" collapseOnSelect>
         <Container>
         <img className="hey" src={logo} alt='Logo'/>
           <LinkContainer to="/">
@@ -47,7 +47,7 @@ const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i> Sign In
+                    <i className="fas fa-user"></i><strong>Sign In</strong>
                   </Nav.Link>
                 </LinkContainer>
               )}

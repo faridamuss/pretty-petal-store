@@ -33,7 +33,7 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-      <h1 style={{color:"#872f5e", }}><strong>SIGN IN</strong></h1>
+      <h1 style={{color:"#980F5A", }}><strong>SIGN IN</strong></h1>
       {error && <Message variant = 'danger'> {error} </Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>

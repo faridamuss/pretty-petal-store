@@ -28,11 +28,11 @@ const HomeScreen = () => {
       {!keyword ? (
         <ProductCarousel />
       ) : (
-        <Link to="/" className="btn btn-light">
+        <Link to="/" className="long shadow btn btn-light">
           Go Back
         </Link>
       )}
-      <h1 style={{ color: "#872f5e", padding: "10px" }}><strong>LATEST PRODUCTS</strong>
+      <h1 style={{ color: "#980F5A", padding: "10px" }}><strong>LATEST PRODUCTS</strong>
       </h1>
       {loading ? (
         <Loader />
@@ -40,9 +40,9 @@ const HomeScreen = () => {
         <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Row>
+          <Row >
             {products.map((product) => (
-              <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+              <Col key={product._id} sm={19} md={8} lg={3} xl={3}>
                 <Product product={product} />
               </Col>
             ))}

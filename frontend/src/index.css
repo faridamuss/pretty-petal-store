@@ -1,6 +1,6 @@
 main {
   min-height: 85vh;
-  /* background-color: #efdad7; */
+  background-color: #F9F9F9;
   /* background-image: url(../public/images/6.png); */
 }
 
@@ -41,9 +41,8 @@ h2 {
 
 .carousel img {
   height: 200px;
-  padding: 10px;
+  padding: 5px;
   margin: 35px;
-  border-radius: 8%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,7 +50,7 @@ h2 {
   margin: 0 auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 400px) {
   .carousel-caption h2 {
     font-size: 2vw;
   }

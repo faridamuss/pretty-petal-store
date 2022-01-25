@@ -44,7 +44,7 @@ const CartScreen = () => {
   return (
     <Row>
       <Col md={8}>
-      <h2 style={{color:"#872f5e"}}><strong>SHOPPING CART</strong></h2>
+      <h2 style={{color:"#980F5A"}}><strong>SHOPPING CART</strong></h2>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to="/">Go Back</Link>
@@ -95,7 +95,7 @@ const CartScreen = () => {
       </Col>
       <Col md={4}>
         <Card>
-          <ListGroup variant="flush">
+          <ListGroup variant="long shadow flush">
             <ListGroup.Item>
               <h2>
                 Subtotal (
@@ -110,7 +110,7 @@ const CartScreen = () => {
             <ListGroup.Item>
               <Button
                 type="button"
-                className="btn-block"
+                className="long shadow btn-block"
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
