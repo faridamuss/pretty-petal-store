@@ -93,11 +93,11 @@ const CartScreen = () => {
           </ListGroup>
         )}
       </Col>
-      <Col md={4} style={{padding: "40px", align: "right"}}>
-        <Card>
+      <Col md={4} style={{padding: "30px", align: "right"}}>
+        <Card style={{textAlign: "right"}}>
           <ListGroup variant="long shadow flush">
-            <ListGroup.Item>
-              <h2 styling={{padding: "20px", textAlign: "center"}}>
+            <ListGroup.Item styling={{ color:"#980F5A", padding: "30px", textAlign: "center"}}>
+              <h2>
                 Subtotal items (
                 {cartItems.reduce((acc, item) => (parseInt(acc) + parseInt( item.qty)), 0)})
               </h2>

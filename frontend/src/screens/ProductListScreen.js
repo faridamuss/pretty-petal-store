@@ -75,7 +75,7 @@ const ProductListScreen = () => {
     <>
       <Row className="align-items-center">
         <Col>
-          <h1 style={{color:"#872f5e"}}><strong>PRODUCTS ADMINISTRATION</strong></h1>
+          <h1 style={{color:"#872f5e"}}><strong>PRODUCT ADMINISTRATION</strong></h1>
         </Col>
         <Col className='text-right'>
           <Button className="d-block mr-0 ml-auto" onClick={createProductHandler}>
