@@ -32,8 +32,8 @@ const HomeScreen = () => {
           Go Back
         </Link>
       )}
-      <h1 style={{padding: "10px" }}><strong>LATEST PRODUCTS</strong>
-      </h1>
+      <h1 style={{padding: "0px" }}><strong>WELCOME TO PRETTY PETAL STORE</strong>
+      </h1> <p> Welcome to our Pretty Petal store. Our store is open for curb side pick up Wednesday to Saturday. We deliver city wide & to the Ottawa surroundings. Tuesday to Saturday. Please contact us by phone or email for your needs or simply order here. Fresh new inventory arrives every Tuesday afternoon. We have new products available on our website - changing with the seasons. Let flowers bring some cheer to you from us. Thank You :)</p>
       {loading ? (
         <Loader />
       ) : error ? (
