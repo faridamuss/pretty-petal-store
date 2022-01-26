@@ -104,7 +104,7 @@ const ProfileScreen = () => {
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name" className="my-sm-3">
               <Form.Label>
-                <strong>Name</strong>
+                <strong style={{ color: "#872f5e" }}>Name</strong>
               </Form.Label>
               <Form.Control
                 type="name"
@@ -114,9 +114,9 @@ const ProfileScreen = () => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="email" className="my-sm-2">
+            <Form.Group controlId="email" className="my-sm-3">
               <Form.Label>
-                <strong>Email Address</strong>
+                <strong style={{ color: "#872f5e" }}>Email Address</strong>
               </Form.Label>
               <Form.Control
                 type="email"
@@ -128,7 +128,7 @@ const ProfileScreen = () => {
 
             <Form.Group controlId="password" className="my-sm-2">
               <Form.Label>
-                <strong>Password</strong>
+                <strong style={{ color: "#872f5e" }}>Password</strong>
               </Form.Label>
               <Form.Control
                 type="password"
@@ -140,7 +140,7 @@ const ProfileScreen = () => {
 
             <Form.Group controlId="confirmPassword" className="my-sm-2">
               <Form.Label>
-                <strong>Confirm Password</strong>
+                <strong style={{ color: "#872f5e" }} >Confirm Password</strong>
               </Form.Label>
               <Form.Control
                 type="password"
@@ -165,7 +165,7 @@ const ProfileScreen = () => {
           <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr>
-                <th>ID</th>
+                <th>ORDER ID</th>
                 <th>DATE</th>
                 <th>TOTAL</th>
                 <th>PAID</th>

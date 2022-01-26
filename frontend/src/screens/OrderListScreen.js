@@ -28,16 +28,16 @@ const OrderListScreen = ({ history }) => {
 
   return (
     <>
-      <h1 style={{color:"#872f5e"}}><strong>ORDERS</strong></h1>
+      <h1 style={{color:"#872f5e"}}><strong>ORDER ADMINISTRATION</strong></h1>
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <Table striped bordered hover responsive className="table-active">
+        <Table striped bordered hover responsive className="table-sm">
           <thead>
           <tr>
-              <th>ID</th>
+              <th>PRODUCT ID</th>
               <th>USER</th>
               <th>DATE</th>
               <th>TOTAL</th>

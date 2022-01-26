@@ -59,26 +59,27 @@ const PlaceOrderScreen = () => {
   return (
     <>
       <CheckoutSteps step1 step2 step3 step4 />
-      <Row>
+      <h1 style={{color:"#872f5e", textAlign: "center"}}>Please confirm your shipping information and order</h1>
+      <Row style={{ paddingTop: "30px"}}>
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2><strong>Shipping</strong></h2>
-              <p>
-                <strong>Address:</strong>
+              <h2 style={{paddingTop: "20px", paddingLeft: "15px"}}><strong>Shipping address</strong></h2>
+              <p style={{paddingTop: "6px", paddingLeft: "15px"}}>
+                <strong>Address: </strong>
                 {cart.shippingAddress.address}, {cart.shippingAddress.city}{" "}
                 {cart.shippingAddress.postalCode},{cart.shippingAddress.country}
               </p>
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
-              <strong>Method: </strong>
+              <h2 style={{paddingTop: "6px", paddingLeft: "15px"}}> Your Selected Payment Method</h2>
+              <strong style={{padding: "15px"}}>Method: </strong>
               {cart.paymentMethod}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h2 style={{padding: "15px"}}>Items in your cart</h2>
               {cart.cartItems.length === 0 ? (
                 <Message>Your cart is empty</Message>
               ) : (
@@ -86,7 +87,7 @@ const PlaceOrderScreen = () => {
                   {cart.cartItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
-                        <Col md={1}>
+                        <Col md={5}>
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -110,33 +111,35 @@ const PlaceOrderScreen = () => {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={4}>
-          <Card>
+
+
+        <Col md={4} style={{textAlign: "right"}}>
+          <Card style={{padding: "20px"}} className="long shadow">
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2 style={{color:"#872f5e", textAlign: "right"}}>Order Summary</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col>Items:</Col>
                   <Col>${cart.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
+                  <Col>Shipping fee: </Col>
                   <Col>${cart.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Tax</Col>
+                  <Col>Tax:</Col>
                   <Col>${cart.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Total</Col>
+                  <Col>Subtotal:</Col>
                   <Col>${cart.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>
@@ -144,9 +147,9 @@ const PlaceOrderScreen = () => {
                 {error && <Message variant="danger">{error}</Message>}
               </ListGroup.Item>
               <ListGroup.Item>
-                <Button
+                <Button 
                   type="button"
-                  className="btn-block"
+                  className="btn-block" 
                   disabled={cart.cartItems === 0}
                   onClick={placeOrderHandler}
                 >

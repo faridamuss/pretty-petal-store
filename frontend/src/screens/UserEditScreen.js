@@ -53,7 +53,7 @@ const UserEditScreen = ({ navigation }) => {
   return (
     <>
       <Link to="/admin/userlist" className="shadow btn btn-light my-3">
-        Go Back
+        Go Back To Users
       </Link>
       <FormContainer>
       <h1 style={{color:"#872f5e"}}><strong>EDIT USER</strong></h1>
@@ -66,7 +66,7 @@ const UserEditScreen = ({ navigation }) => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+              <Form.Label style={{color:"#872f5e"}}>Name</Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -76,8 +76,8 @@ const UserEditScreen = ({ navigation }) => {
             </Form.Group>
 
             <Form.Group controlId="email">
-              <Form.Label>Email Address</Form.Label>
-              <Form.Control
+              <Form.Label style={{color:"#872f5e"}}>Email Address</Form.Label>
+              <Form.Control 
                 type="email"
                 placeholder="Enter email"
                 value={email}
@@ -88,13 +88,13 @@ const UserEditScreen = ({ navigation }) => {
             <Form.Group controlId="isadmin">
               <Form.Check
                 type="checkbox"
-                label="Is Admin"
-                checked={isAdmin} className="form-label mt-2"
+                label="Make this user an admin"
+                checked={isAdmin} className="form-label mt-3"
                 onChange={(e) => setIsAdmin(e.target.checked)}
               ></Form.Check>
             </Form.Group>
 
-            <Button type="submit" variant="primary" className="form-label mt-2">
+            <Button type="submit" variant="primary" className="form-label mt-3">
               Update
             </Button>
           </Form>

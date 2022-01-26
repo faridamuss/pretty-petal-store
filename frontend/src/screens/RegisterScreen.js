@@ -49,13 +49,13 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
-      <h1 style={{color:"#872f5e", }}><strong>REGISTER</strong></h1>
+      <h1 style={{color:"#872f5e", }}><strong>REGISTER AS A NEW USER</strong></h1>
       {message && <Message variant="danger"> {message} </Message>}
       {error && <Message variant="danger"> {error} </Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="name" className="form-label mt-2"> 
-          <Form.Label><strong>Name</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "5px", fontSize:"18px" }}><strong>Name</strong></Form.Label>
           <Form.Control
             type="name"
             placeholder="Enter name"
@@ -65,7 +65,7 @@ const RegisterScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="email" className="form-label mt-2">
-          <Form.Label><strong>Email Address</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "5px", fontSize:"18px" }} ><strong>Email Address</strong></Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
@@ -75,8 +75,8 @@ const RegisterScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="password" className="form-label mt-2">
-          <Form.Label><strong>Password</strong></Form.Label>
-          <Form.Control
+          <Form.Label style={{color:"#980F5A", paddingTop: "5px", fontSize:"18px" }}><strong>Password</strong></Form.Label>
+          <Form.Control 
             type="password"
             placeholder="Enter password"
             value={password}
@@ -85,7 +85,7 @@ const RegisterScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="confirmPassword" className="form-label mt-2">
-          <Form.Label><strong>Confirm Password</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "5px", fontSize:"18px" }} ><strong>Confirm Password</strong></Form.Label>
           <Form.Control
             type="password"
             placeholder="Confirm password"
@@ -94,12 +94,12 @@ const RegisterScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button type="submit" variant="primary" className="form-label mt-3">
+        <Button type="submit" variant="primary" className="form-label mt-2">
           Register
         </Button>
       </Form>
       <Row className="py-3">
-        <Col>
+        <Col style={{color:"#980F5A", paddingTop: "10px", fontSize:"18px", textAlign: 'left'}}>
           Have an Account?{" "}
           <Link to={redirect ? `/login?redirect=${redirect}` : "/login"}>
             Login

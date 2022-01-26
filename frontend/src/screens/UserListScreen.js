@@ -36,7 +36,7 @@ const UserListScreen = () => {
 
   return (
     <>
-      <h1 style={{color:"#872f5e"}}><strong>USERS</strong></h1>
+      <h1 style={{color:"#872f5e"}}><strong>USER ADMINISTRATION</strong></h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -45,9 +45,9 @@ const UserListScreen = () => {
         <Table striped bordered hover responsive className="table-sm">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>EMAIL</th>
+              <th>USER ID</th>
+              <th>FULL NAME</th>
+              <th>EMAIL ADDRESS</th>
               <th>ADMIN</th>
               <th></th>
             </tr>
