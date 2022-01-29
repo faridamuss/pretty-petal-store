@@ -17,7 +17,7 @@ An online store for selling stunning bouquets and arrangements for special occas
 - Database seeder (products & users)
 
 ## Final Product 
-
+!["Pretty Pettal Store"]()
 
 ## Tech Stack 
 - React
@@ -27,6 +27,7 @@ An online store for selling stunning bouquets and arrangements for special occas
 - Mango DB
 
 ## Dependencies: 
+```
 - "axios": "^0.24.0"
 - "bootstrap-icons": "^1.7.2",
 - "react": "^17.0.2",
@@ -43,5 +44,6 @@ An online store for selling stunning bouquets and arrangements for special occas
 - "redux-devtools-extension": "^2.13.9",
 - "redux-thunk": "^2.4.1",
 - "web-vitals": "^2.1.3"
+```
 
 ### Created by [Farida](https://github.com/faridamoussaeff), [Ekin Koluk](https://github.com/ekinkoluk) & [Zeinab Abdultawab](https://github.com/Zeinaaaa)
