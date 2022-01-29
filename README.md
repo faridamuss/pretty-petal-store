@@ -17,7 +17,7 @@ An online store for selling stunning bouquets and arrangements for special occas
 - Database seeder (products & users)
 
 ## Final Product 
-!["Pretty Pettal Store"]()
+!["Pretty Pettal Store"](https://www.canva.com/design/DAE2zOHkVtQ/share/preview?token=huHZKIZYXuptQTJxUpMiXw&role=EDITOR&utm_content=DAE2zOHkVtQ&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
 
 ## Tech Stack 
 - React
