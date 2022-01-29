@@ -78,10 +78,10 @@ const ProductScreen = () => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={8} style={{ position: "center"}} >
+            <Col md={6} style={{ position: "center"}} >
               <Image src={product.image} alt={product.name} fluid />
             </Col>
-            <Col md={4} className="btn btn-light my-0"> 
+            <Col md={6} className="long shadow btn btn-light my-0"> 
               <ListGroup
                 variant="flush"
                 className="p-3 mb-5 bg-white rounded"
