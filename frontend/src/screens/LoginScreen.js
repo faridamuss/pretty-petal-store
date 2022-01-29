@@ -33,12 +33,12 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-      <h1 style={{color:"#980F5A", }}><strong>SIGN IN</strong></h1>
+      <h1 style={{color:"#980F5A", paddingTop: "60px" }}><strong>Sign In</strong></h1>
       {error && <Message variant = 'danger'> {error} </Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email" className="form-label mt-2">
-          <Form.Label><strong>Email Address</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "10px", fontSize:"20px"  }}><strong >Email Address</strong></Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"
@@ -48,7 +48,7 @@ const LoginScreen = () => {
         </Form.Group>
 
         <Form.Group controlId="password" className="form-label mt-2">
-          <Form.Label><strong>Password</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "10px", fontSize:"20px" }}><strong>Password</strong></Form.Label>
           <Form.Control
             type="password"
             placeholder="Enter password"
@@ -56,12 +56,12 @@ const LoginScreen = () => {
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
-        <Button type="submit" variant="primary" className="form-label mt-2">
+        <Button type="submit" variant="primary" className="form-label mt-4">
           Sign In
         </Button>
       </Form>
-      <Row className="py-3">
-        <Col>
+      <Row className="py-4">
+        <Col style={{color:"#980F5A", paddingTop: "10px", fontSize:"18px", textAlign: 'left'}}>
           New Customer?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register

@@ -67,8 +67,8 @@ const ProductScreen = () => {
 
   return (
     <>
-      <Link className="shadow btn btn-secondary my-3" to="/">
-        Go Back
+      <Link className="shadow btn btn-secondary my-4" to="/">
+        Go Back to Products
       </Link>
       {loading ? (
         <Loader />
@@ -78,90 +78,34 @@ const ProductScreen = () => {
         <>
           <Meta title={product.name} />
           <Row>
-            <Col md={6}>
+            <Col md={6} style={{ position: "center"}} >
               <Image src={product.image} alt={product.name} fluid />
             </Col>
-            <Col md={3}>
+            <Col md={6} className="long shadow btn btn-light my-0"> 
               <ListGroup
                 variant="flush"
-                className="shadow p-3 mb-5 bg-white rounded"
+                className="p-3 mb-5 bg-white rounded"
               >
                 <ListGroup.Item>
-                  <h3>{product.name}</h3>
+                  <h3 style={{padding: "20px"}} >{product.name}</h3>
                 </ListGroup.Item>
-                <ListGroup.Item>
+                <ListGroup.Item style={{padding: "20px"}}>
                   <Rating
                     value={product.rating}
-                    text={`${product.numReviews} reviews`}
+                    text={`${product.numReviews} customer reviews`}
                   />
                 </ListGroup.Item>
                 <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-                <ListGroup.Item>
-                  Description: {product.description}
+                <ListGroup.Item style={{padding: "30px"}}>
+                {product.description}
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>
-              <Card>
-                <ListGroup variant="flush" className="shadow">
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Price:</Col>
-                      <Col>
-                        <strong>${product.price}</strong>
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
-
-                  <ListGroup.Item>
-                    <Row>
-                      <Col>Status:</Col>
-                      <Col>
-                        {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
-                      </Col>
-                    </Row>
-                  </ListGroup.Item>
-
-                  {product.countInStock > 0 && (
-                    <ListGroup.Item>
-                      <Row>
-                        <Col>Qty:</Col>
-                        <Col>
-                          <Form.Control
-                            as="select"
-                            value={qty}
-                            onChange={(e) => setQty(e.target.value)}
-                          >
-                            {[...Array(product.countInStock).keys()].map(
-                              (x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              )
-                            )}
-                          </Form.Control>
-                        </Col>
-                      </Row>
-                    </ListGroup.Item>
-                  )}
-
-                  <ListGroup.Item>
-                    <Button
-                      onClick={addToCartHandler}
-                      className="btn btn-dark"
-                      type="button"
-                      disabled={product.countInStock === 0}
-                    >
-                      Add To Cart
-                    </Button>
-                  </ListGroup.Item>
-                </ListGroup>
-              </Card>
-            </Col>
+            
           </Row>
           <Row>
-            <Col md={6} className="my-sm-2">
-            <h2 style={{color:"#872f5e", }}><strong>Reviews</strong></h2>
+            <Col md={15} className="my-sm-1">
+            <h2 style={{color:"#872f5e", padding: "20px" }}><strong>Reviews</strong></h2>
               {product.reviews.length === 0 && <Message>No Reviews</Message>}
               <ListGroup variant="flush" className="shadow p-3 mb-5 bg-white rounded">
                 {product.reviews.map((review) => (
@@ -216,6 +160,64 @@ const ProductScreen = () => {
               </ListGroup>
             </Col>
           </Row>
+
+          {/* ADD TO CART */}
+          <Col md={4} className="long shadow d-block mr-0 ml-auto">
+              <Card>
+                <ListGroup variant="flush" className="p-3 mb-4 bg-white rounded">
+                  <ListGroup.Item>
+                    <Row>
+                      <Col style={{color:"#872f5e"}} >Price:</Col>
+                      <Col>
+                        <strong style={{color:"#872f5e"}}>${product.price}</strong>
+                      </Col>
+                    </Row>
+                  </ListGroup.Item>
+                  <ListGroup.Item>
+                    <Row>
+                      <Col style={{color:"#872f5e"}}>Availability:</Col>
+                      <Col style={{color:"#872f5e"}}>
+                        {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
+                      </Col>
+                    </Row>
+                  </ListGroup.Item>
+
+                  {product.countInStock > 0 && (
+                    <ListGroup.Item>
+                      <Row>
+                        <Col style={{color:"#872f5e"}}>Quantity:</Col>
+                        <Col>
+                          <Form.Control
+                            as="select"
+                            value={qty}
+                            onChange={(e) => setQty(e.target.value)}
+                          >
+                            {[...Array(product.countInStock).keys()].map(
+                              (x) => (
+                                <option key={x + 1} value={x + 1}>
+                                  {x + 1}
+                                </option>
+                              )
+                            )}
+                          </Form.Control>
+                        </Col>
+                      </Row>
+                    </ListGroup.Item>
+                  )}
+
+                  <ListGroup.Item style={{color:"#872f5e"}}>
+                    <Button
+                      onClick={addToCartHandler}
+                      className="btn btn-dark"
+                      type="button"
+                      disabled={product.countInStock === 0}
+                    >
+                      Add To Cart
+                    </Button>
+                  </ListGroup.Item>
+                </ListGroup>
+              </Card>
+            </Col>
         </>
       )}
     </>

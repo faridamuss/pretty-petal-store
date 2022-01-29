@@ -93,21 +93,21 @@ const OrderScreen = () => {
     <Message variant="danger">{error}</Message>
   ) : (
     <>
-      <h1>Order {order._id}</h1>
+      {/* <h1>Order {order._id}</h1> */}
       <Row>
         <Col md={8}>
           <ListGroup variant="flush">
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2 style={{color:"#872f5e", paddingTop: "20px", paddingLeft: "10px"}} >Shipping</h2>
               <p>
-                <strong>Name: </strong> {order.user.name}
+                <strong style={{ paddingTop: "20px", paddingLeft: "10px"}}>Name: </strong> {order.user.name}
               </p>
               <p>
-                <strong>Email: </strong>{" "}
+                <strong style={{ paddingTop: "20px", paddingLeft: "10px"}}>Email: </strong>{" "}
                 <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
               </p>
               <p>
-                <strong>Address:</strong>
+                <strong style={{ paddingTop: "20px", paddingLeft: "10px"}}>Address:</strong>
                 {order.shippingAddress.address}, {order.shippingAddress.city}{" "}
                 {order.shippingAddress.postalCode},{" "}
                 {order.shippingAddress.country}
@@ -117,14 +117,14 @@ const OrderScreen = () => {
                   Delivered on {order.deliveredAt}
                 </Message>
               ) : (
-                <Message variant="danger">Not Delivered</Message>
+                <Message variant="danger">Your Order is Not Delivered</Message>
               )}
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Payment Method</h2>
+              <h2 style={{color:"#872f5e", paddingTop: "20px", paddingLeft: "10px"}}>Payment Method</h2>
               <p>
-                <strong>Method: </strong>
+                <strong style={{ paddingTop: "20px", paddingLeft: "10px"}}>Method: </strong>
                 {order.paymentMethod}
               </p>
               {order.isPaid ? (
@@ -135,7 +135,7 @@ const OrderScreen = () => {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <h2>Order Items</h2>
+              <h2 style={{color:"#872f5e", paddingTop: "20px", paddingLeft: "10px"}}>Items in your cart</h2>
               {order.orderItems.length === 0 ? (
                 <Message>Order is empty</Message>
               ) : (
@@ -143,7 +143,7 @@ const OrderScreen = () => {
                   {order.orderItems.map((item, index) => (
                     <ListGroup.Item key={index}>
                       <Row>
-                        <Col md={1}>
+                        <Col md={4}>
                           <Image
                             src={item.image}
                             alt={item.name}
@@ -171,29 +171,29 @@ const OrderScreen = () => {
           <Card>
             <ListGroup variant="flush">
               <ListGroup.Item>
-                <h2>Order Summary</h2>
+                <h2 style={{color:"#872f5e", textAlign: "center"}}>Order Summary</h2>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Items</Col>
+                  <Col>Items:</Col>
                   <Col>${order.itemsPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
+                  <Col>Shipping fee:</Col>
                   <Col>${order.shippingPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Tax</Col>
+                  <Col>Tax:</Col>
                   <Col>${order.taxPrice}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Total</Col>
+                  <Col>Subtotal:</Col>
                   <Col>${order.totalPrice}</Col>
                 </Row>
               </ListGroup.Item>

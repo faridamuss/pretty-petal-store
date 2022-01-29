@@ -80,10 +80,6 @@ const ProductEditScreen = ({ navigation }) => {
   }
 
 
-
-
-
-
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
@@ -107,7 +103,7 @@ const ProductEditScreen = ({ navigation }) => {
       </Link>
       <FormContainer>
         <h1 style={{ color: "#872f5e" }}>
-          <strong>EDIT PRODUCT</strong>
+          <strong>Create or edit your product</strong>
         </h1>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>}
@@ -117,8 +113,8 @@ const ProductEditScreen = ({ navigation }) => {
           <Message variant="danger">{error}</Message>
         ) : (
           <Form onSubmit={submitHandler}>
-            <Form.Group controlId="name">
-              <Form.Label>Name</Form.Label>
+            <Form.Group controlId="name"  className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}>Name: </Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter name"
@@ -127,8 +123,8 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="price">
-              <Form.Label>Price</Form.Label>
+            <Form.Group controlId="price"  className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}> Price:</Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter price"
@@ -137,8 +133,8 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="image">
-              <Form.Label>Image</Form.Label>
+            <Form.Group controlId="image"  className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}> Your Image:</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter image url"
@@ -154,8 +150,8 @@ const ProductEditScreen = ({ navigation }) => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group controlId="brand">
-              <Form.Label>Brand</Form.Label>
+            <Form.Group controlId="brand"  className="form-label mt-2" >
+              <Form.Label style={{ color: "#872f5e" }}>Brand</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter brand"
@@ -164,8 +160,8 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="countInStock">
-              <Form.Label>Count In Stock</Form.Label>
+            <Form.Group controlId="countInStock" className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}>How many items in stock: </Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter countInStock"
@@ -174,8 +170,8 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="category">
-              <Form.Label>Category</Form.Label>
+            <Form.Group controlId="category" className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}>Category</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter category"
@@ -184,8 +180,8 @@ const ProductEditScreen = ({ navigation }) => {
               ></Form.Control>
             </Form.Group>
 
-            <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+            <Form.Group controlId="description" className="form-label mt-2">
+              <Form.Label style={{ color: "#872f5e" }}>Description</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter description"

@@ -1,11 +1,24 @@
 main {
   min-height: 90vh;
+<<<<<<< HEAD
   /* /* background-color: #EEEEEE; */
   background-color: #F3F1F5 
+=======
+  background-color: #F3F1F5
+>>>>>>> feature/styling
   /* background-image: url("../public/images/b2.png");
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: 100% 100%; */
+}
+
+.rating {
+  font-size: 18px;
+  /* text-align: right; */
+}
+
+.btn-block {
+  text-align: center;
 }
 
 h3 {
@@ -45,7 +58,7 @@ h2 {
 .carousel-caption {
   position: absolute;
   top: 0;
-  padding: 2px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -55,7 +68,7 @@ h2 {
 
 .carousel img {
   height: 300px;
-  padding: 5px;
+  padding: 7px;
   margin: 35px;
   margin-left: auto;
   margin-right: auto;
@@ -65,8 +78,8 @@ h2 {
 }
 
 @media (max-width: 400px) {
-  .carousel-caption h2 {
-    font-size: 2vw;
+  .carousel-caption h3 {
+    font-size: 1vw;
   }
 }
 

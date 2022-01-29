@@ -12,6 +12,7 @@ const ShippingScreen = ({ }) => {
 
   const [address, setAddress] = useState(shippingAddress.address)
   const [city, setCity] = useState(shippingAddress.city)
+  const [province, setProvince] = useState(shippingAddress.city)
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode)
   const [country, setCountry] = useState(shippingAddress.country)
 
@@ -29,7 +30,7 @@ const ShippingScreen = ({ }) => {
       <h1 style={{color:"#872f5e"}}><strong>SHIPPING ADDRESS</strong></h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='address'>
-          <Form.Label>Address</Form.Label>
+          <Form.Label style={{color:"#872f5e"}}>Address</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter address'
@@ -40,7 +41,7 @@ const ShippingScreen = ({ }) => {
         </Form.Group>
 
         <Form.Group controlId='city' className="form-label mt-2">
-          <Form.Label>City</Form.Label>
+          <Form.Label style={{color:"#872f5e"}}>City</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter city'
@@ -50,8 +51,19 @@ const ShippingScreen = ({ }) => {
           ></Form.Control>
         </Form.Group>
 
+        <Form.Group controlId='province' className="form-label mt-2">
+          <Form.Label style={{color:"#872f5e"}}>Province</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='Enter province'
+            value={province}
+            required
+            onChange={(e) => setProvince(e.target.value)}
+          ></Form.Control>
+        </Form.Group>
+
         <Form.Group controlId='postalCode' className="form-label mt-2">
-          <Form.Label>Postal Code</Form.Label>
+          <Form.Label style={{color:"#872f5e"}}>Postal Code</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter postal code'
@@ -62,7 +74,7 @@ const ShippingScreen = ({ }) => {
         </Form.Group>
 
         <Form.Group controlId='country' className="form-label mt-2">
-          <Form.Label>Country</Form.Label>
+          <Form.Label style={{color:"#872f5e"}}>Country</Form.Label>
           <Form.Control
             type='text'
             placeholder='Enter country'

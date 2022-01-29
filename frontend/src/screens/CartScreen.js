@@ -43,8 +43,8 @@ const CartScreen = () => {
 
   return (
     <Row>
-      <Col md={8}>
-      <h2 style={{color:"#980F5A"}}><strong>SHOPPING CART</strong></h2>
+      <Col md={8} >
+      <h2 style={{color:"#980F5A", padding: "5px"}}><strong>SHOPPING CART</strong></h2>
         {cartItems.length === 0 ? (
           <Message>
             Your cart is empty <Link to="/">Go Back</Link>
@@ -54,14 +54,14 @@ const CartScreen = () => {
             {cartItems.map((item) => (
               <ListGroup.Item key={item.product}>
                 <Row>
-                  <Col md={2}>
+                  <Col md={4} style={{padding: "10px", align: "right"}}>
                     <Image src={item.image} alt={item.name} fluid rounded />
                   </Col>
-                  <Col md={3}>
+                  <Col md={2} style={{padding: "10px", align: "right"}}>
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </Col>
-                  <Col md={2}>${item.price}</Col>
-                  <Col md={2}>
+                  <Col md={2}style={{padding: "10px", textAlign: "center"}}>${item.price}</Col>
+                  <Col md={2} style={{padding: "10px", textAlign: "center"}}>
                     <Form.Control
                       as="select"
                       value={item.qty}
@@ -78,13 +78,13 @@ const CartScreen = () => {
                       ))}
                     </Form.Control>
                   </Col>
-                  <Col md={2}>
+                  <Col md={2} style={{padding: "10px", align: "right"}}>
                     <Button
                       type="button"
-                      variant="light"
+                      variant="btn btn-outline-primary"
                       onClick={() => removeFromCartHandler(item.product)}
                     >
-                      <i className="fas fa-trash"></i>
+                    Remove
                     </Button>
                   </Col>
                 </Row>
@@ -93,14 +93,13 @@ const CartScreen = () => {
           </ListGroup>
         )}
       </Col>
-      <Col md={4}>
-        <Card>
+      <Col md={4} style={{padding: "30px", align: "right"}}>
+        <Card style={{textAlign: "right"}}>
           <ListGroup variant="long shadow flush">
-            <ListGroup.Item>
+            <ListGroup.Item styling={{ color:"#980F5A", padding: "30px", textAlign: "center"}}>
               <h2>
-                Subtotal (
+                Subtotal items (
                 {cartItems.reduce((acc, item) => (parseInt(acc) + parseInt( item.qty)), 0)})
-                items
               </h2>
               $
               {cartItems

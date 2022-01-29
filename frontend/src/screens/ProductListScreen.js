@@ -75,11 +75,11 @@ const ProductListScreen = () => {
     <>
       <Row className="align-items-center">
         <Col>
-          <h1 style={{color:"#872f5e"}}><strong>PRODUCTS</strong></h1>
+          <h1 style={{color:"#872f5e"}}><strong>PRODUCT ADMINISTRATION</strong></h1>
         </Col>
         <Col className='text-right'>
           <Button className="d-block mr-0 ml-auto" onClick={createProductHandler}>
-            <i className='fas fa-plus'></i> Create Product
+          <i class="fa-solid fa-plus"></i> Create A New Product
           </Button>
         </Col>
       </Row>
@@ -96,7 +96,7 @@ const ProductListScreen = () => {
         <Table striped bordered hover responsive className="table-sm">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>PRODUCT ID</th>
               <th>NAME</th>
               <th>PRICE</th>
               <th>CATEGORY</th>
@@ -114,8 +114,8 @@ const ProductListScreen = () => {
                 <td>{product.brand}</td>
                 <td>
                   <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                    <Button variant="light" className="btn-sm">
-                      <i className="fas fa-edit"></i>
+                    <Button variant="light" className="btn-sm" >
+                   <i class="fa fa-pencil" aria-hidden="true"></i>
                     </Button>
                   </LinkContainer>
                   <Button
