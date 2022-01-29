@@ -33,12 +33,12 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
-      <h1 style={{color:"#980F5A", paddingTop: "60px" }}><strong>Please login into your account</strong></h1>
+      <h1 style={{color:"#980F5A", paddingTop: "60px" }}><strong>Sign In</strong></h1>
       {error && <Message variant = 'danger'> {error} </Message>}
       {loading && <Loader/>}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="email" className="form-label mt-2">
-          <Form.Label style={{color:"#980F5A", paddingTop: "30px", fontSize:"20px"  }}><strong >Email Address</strong></Form.Label>
+          <Form.Label style={{color:"#980F5A", paddingTop: "10px", fontSize:"20px"  }}><strong >Email Address</strong></Form.Label>
           <Form.Control
             type="email"
             placeholder="Enter email"

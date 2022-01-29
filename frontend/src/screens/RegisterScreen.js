@@ -49,7 +49,7 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
-      <h1 style={{color:"#872f5e", }}><strong>REGISTER AS A NEW USER</strong></h1>
+      <h1 style={{color:"#872f5e", }}><strong>REGISTER</strong></h1>
       {message && <Message variant="danger"> {message} </Message>}
       {error && <Message variant="danger"> {error} </Message>}
       {loading && <Loader />}
