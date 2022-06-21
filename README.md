@@ -1,5 +1,5 @@
 # The Pretty Petal 
-An online store for selling stunning bouquets and arrangements for special occasions. This e-commerce store was built with MERN stack, and utilizes third party API's. 
+An online store for selling stunning bouquets and arrangements for special occasions. This e-commerce store was built with MERN stack and utilizes a third party API's. 
 
 ## Main Features: 
 - Full featured shopping cart
@@ -24,7 +24,7 @@ An online store for selling stunning bouquets and arrangements for special occas
 - React-Bootstrap
 - Express
 - Node.js
-- Mango DB
+- MongoDB
 
 ## Dependencies: 
 ```
@@ -45,5 +45,4 @@ An online store for selling stunning bouquets and arrangements for special occas
 - "redux-thunk": "^2.4.1",
 - "web-vitals": "^2.1.3"
 ```
-
 ### Created by [Farida](https://github.com/faridamoussaeff), [Ekin Koluk](https://github.com/ekinkoluk) & [Zeinab Abdultawab](https://github.com/Zeinaaaa)
