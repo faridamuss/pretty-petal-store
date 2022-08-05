@@ -45,4 +45,4 @@ An online store for selling stunning bouquets and arrangements for special occas
 - "redux-thunk": "^2.4.1",
 - "web-vitals": "^2.1.3"
 ```
-### Created by [Farida](https://github.com/faridamoussaeff), [Ekin Koluk](https://github.com/ekinkoluk) & [Zeinab Abdultawab](https://github.com/Zeinaaaa)
+### Created by [Farida](https://github.com/faridamoussaeff), [Ekin] & [Zeinab Abdultawab](https://github.com/Zeinaaaa)
